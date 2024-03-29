@@ -110,7 +110,7 @@ export default function Home() {
   const onSubmit = () => refetch()
 
   const debouncedSubmit = debounce(onSubmit, 400)
-  const _debouncedSubmit = useCallback(debouncedSubmit, [])
+  const _debouncedSubmit = useCallback(debouncedSubmit, [debouncedSubmit])
 
   const applyArrayFilter = ({
     category,
