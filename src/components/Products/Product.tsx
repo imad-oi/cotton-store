@@ -1,12 +1,15 @@
 import { Product } from '@/db'
+import Image from 'next/image'
 
 const Product = ({ product }: { product: Product }) => {
   return (
     <div className='group relative'>
       <div className='aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80'>
-        <img
+        <Image
           src={product.imageId}
           alt='product image'
+          width={300}
+          height={300}
           className='h-full w-full object-cover object-center'
         />
       </div>
